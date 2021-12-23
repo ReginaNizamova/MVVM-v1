@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8b6db2eb74f34751b7c5bbcab0adc801" Name="Diagram1">
+        <EntityTypeShape EntityType="ControlStudyModel.Admin" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.Discipline" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.GradesStudent" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.Group" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.Role" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.Student" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.Teacher" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControlStudyModel.User" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <AssociationConnector Association="ControlStudyModel.FK_RolesAdmins" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_DisciplineGradesStudents" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_DisciplineTeachers" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_StudentsGradesStudents" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_GroupsStudents" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_RolesStudents" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_RolesTeachers" ManuallyRouted="false" />
+        <AssociationConnector Association="ControlStudyModel.FK_RolesUsers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
