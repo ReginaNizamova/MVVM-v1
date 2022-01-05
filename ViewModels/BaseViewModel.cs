@@ -12,6 +12,7 @@ namespace ControlStudy.ViewModels
         private Action<object> execute;
         private Func<object, bool> canExecute;
         private Frame _frame;
+        private DataGrid _dataGrid;
 
         public Frame Frame 
         {
@@ -69,6 +70,20 @@ namespace ControlStudy.ViewModels
         public void Execute(object parameter)
         {
             execute(parameter);
+        }
+
+        public DataGrid DataGrid
+        {
+            get
+            {
+                return _dataGrid;
+            }
+
+            set
+            {
+                _dataGrid = value;
+                OnPropertyChanged("DataGrid");
+            }
         }
     }
 }

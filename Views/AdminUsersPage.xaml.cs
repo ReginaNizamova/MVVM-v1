@@ -1,4 +1,7 @@
-﻿using ControlStudy.ViewModels;
+﻿using ControlStudy.Models;
+using ControlStudy.ViewModels;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 
 namespace ControlStudy.Views
@@ -8,7 +11,7 @@ namespace ControlStudy.Views
         public AdminUsersPage(Frame frame)
         {
             InitializeComponent();
-            DataContext = new AdminViewModel(frame);
+            DataContext = new AdminViewModel(frame, AdminUsersDataGrid);
         }
     }
 }

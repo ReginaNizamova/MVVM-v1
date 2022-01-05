@@ -5,10 +5,10 @@ namespace ControlStudy.Views
 {
     public partial class AdminPage : Page
     {
-        public AdminPage(Frame frame)
+        public AdminPage()
         {
             InitializeComponent();
-            DataContext = new AdminViewModel(frame);
+            DataContext = new AdminViewModel(AdminPageFrame);
         }
     }
 }

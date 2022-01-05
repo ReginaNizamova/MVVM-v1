@@ -18,11 +18,11 @@
         </Grid.ColumnDefinitions>
 
 
-        <Frame x:Name="MainFrame" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Grid.ColumnSpan="3"  NavigationUIVisibility="Hidden"/>
-        <Border Background="#031745" Grid.ColumnSpan="3"/>
+        <Frame x:Name="MainFrame"  Grid.Row="1" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
+        <Border Background="#031745" Grid.ColumnSpan="3" />
 
-        <Button x:Name="BackButton" Command="{Binding BackCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" BorderThickness="0" Cursor="Hand" ToolTip="Назад">
-            <Image Source = "/Resource/back.png"/>
+        <Button x:Name="BackButton" IsEnabled="{Binding Frame.CanGoBack}" Command="{Binding BackCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" BorderThickness="0" Cursor="Hand" ToolTip="Назад">
+            <Image Source = "/Resource/back.png" />
         </Button>
 
         <Viewbox Grid.Column="1" MaxHeight="50">

@@ -93,8 +93,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminUsersAddPage.xaml.cs">
-      <DependentUpon>AdminUsersAddPage.xaml</DependentUpon>
+    <Compile Include="Views\AdminUsersAddWindow.xaml.cs">
+      <DependentUpon>AdminUsersAddWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminUsersPage.xaml.cs">
       <DependentUpon>AdminUsersPage.xaml</DependentUpon>
@@ -122,7 +122,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\AdminUsersAddPage.xaml">
+    <Page Include="Views\AdminUsersAddWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +203,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resource\deleteUser.png" />
+    <Resource Include="Resource\changeUser.png" />
     <Resource Include="Resource\back.png" />
     <Resource Include="Resource\addUser.png" />
     <Resource Include="Resource\journal.png" />

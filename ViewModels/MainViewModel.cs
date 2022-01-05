@@ -8,7 +8,7 @@ namespace ControlStudy.ViewModels
         public MainViewModel(Frame frame)
         {
             Frame = frame;
-            Frame.Navigate(new AdminPage(frame));           
+            Frame.Navigate(new AdminPage());           
         }
 
         private BaseViewModel _backCommand;

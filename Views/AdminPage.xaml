@@ -18,8 +18,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-
         <Border Background="#031745" Grid.RowSpan="2"/>
+
+        <Frame x:Name="AdminPageFrame" Grid.Column="1" Grid.RowSpan="2"/>
 
         <StackPanel Orientation="Vertical" Grid.RowSpan="2" VerticalAlignment="Center">
             <Button x:Name="Users" Command="{Binding UsersCommand}" Style="{StaticResource ButtonStyle}" MaxHeight="170"  Margin="0 0 0 60" BorderThickness="0" ToolTip="Пользователи" Cursor="Hand">

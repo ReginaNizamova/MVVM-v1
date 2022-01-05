@@ -15,6 +15,8 @@ namespace ControlStudy.Models
     
     public partial class ControlStudyEntities : DbContext
     {
+        private static ControlStudyEntities _context;
+
         public ControlStudyEntities()
             : base("name=ControlStudyEntities")
         {
@@ -23,6 +25,13 @@ namespace ControlStudy.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
+        }
+
+        public static ControlStudyEntities GetContext()
+        {
+            if (_context == null)
+                _context = new ControlStudyEntities();
+            return _context;
         }
     
         public virtual DbSet<Admin> Admins { get; set; }

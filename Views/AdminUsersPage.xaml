@@ -10,34 +10,53 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="9*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.75*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
 
         <Border Background="#031745" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
 
-        <StackPanel  Orientation="Vertical" Grid.RowSpan="2" VerticalAlignment="Center">
-            <Button x:Name="Users" Style="{StaticResource ButtonStyle}" MaxHeight="170"  Margin="0 0 0 60" BorderThickness="0" ToolTip="Пользователи" Cursor="Hand">
-                <Image  Source="/Resource/users.png"/>
-            </Button>
-
-            <Button x:Name="Journal" Command="{Binding JournalCommand}" Style="{StaticResource ButtonStyle}" MaxHeight="170"  BorderThickness="0" Margin="0 25" ToolTip="Журнал посещений" Cursor="Hand">
-                <Image Source="/Resource/journal.png"/>
-            </Button>
-        </StackPanel>
-
-        <Button x:Name="AddUsers" Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonStyle}" >
+        <Button x:Name="AddUsers" Command="{Binding AddUsersCommand}" Grid.Row="1" Style="{StaticResource ButtonStyle}" ToolTip="Добавить пользователя" Cursor="Hand">
             <Image Source="/Resource/addUser.png"/>
         </Button>
+
+        <Button x:Name="ChangeUsers" Grid.Row="1" Grid.Column="1" Style="{StaticResource ButtonStyle}" ToolTip="Изменить пользователя" Cursor="Hand">
+            <Image Source="/Resource/changeUser.png"/>
+        </Button>
         
-        <Button x:Name="ChangeUsers" Grid.Row="1" Grid.Column="2" Content="Изменить"/>
-        <Button x:Name="DelUsers"    Grid.Row="1" Grid.Column="3" Content="Удалить"/>
+        <Button x:Name="DelUsers" Grid.Row="1" Grid.Column="3" Style="{StaticResource ButtonStyle}" ToolTip="Удалить пользователя" Cursor="Hand">
+            <Image Source="/Resource/deleteUser.png"/>
+        </Button>
+
+        <StackPanel Orientation="Horizontal" Margin="15" Grid.ColumnSpan="2">
+            <RadioButton x:Name="TeacherRB" Command="{Binding TeacherRBCommand}"/>
+            <TextBlock Text="Преподаватель" Foreground="White" FontSize="14"/>
+
+            <RadioButton x:Name="StudentRB" Command="{Binding StudentRBCommand}" Margin="15 0 0 0"/>
+            <TextBlock Text="Студент" Foreground="White" FontSize="14"/>
+
+            <RadioButton x:Name="AdminRB" Command="{Binding AdminRBCommand}" Margin="15 0 0 0"/>
+            <TextBlock Text="Администратор" Foreground="White" FontSize="14"/>
+        </StackPanel>
+
+
+        <DataGrid x:Name="AdminUsersDataGrid" Grid.ColumnSpan="30" FontSize="14" Margin="15 50 15 15" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Роль"       Binding="{Binding Role.Role1}"             Width="150"/>
+                <DataGridTextColumn Header="Фамилия"    Binding="{Binding Family}"                 Width="150"/>
+                <DataGridTextColumn Header="Имя"        Binding="{Binding Name}"                   Width="150"/>
+                <DataGridTextColumn Header="Отчество"   Binding="{Binding Patronimic}"             Width="150"/>
+                <DataGridTextColumn Header="Группа"     Binding="{Binding Group.numGroup}"         Width="100"/>
+                <DataGridTextColumn Header="Дисциплина" Binding="{Binding Discipline.Discipline1}" Width="150"/>
+                <DataGridTextColumn Header="Логин"      Binding="{Binding User.Login}"             Width="150"/>
+                <DataGridTextColumn Header="Пароль"     Binding="{Binding User.Password}"          Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+         
     </Grid>
 </Page>
